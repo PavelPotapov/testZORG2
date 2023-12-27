@@ -70,7 +70,7 @@
 		height: 100%;
 		min-height: 60px;
 		border-radius: 40px;
-		background: $color-gray2;
+		background: var(--color-gray2);
 		@media screen and (max-width: 1016px) {
 			display: none;
 		}
@@ -81,11 +81,11 @@
 		width: 382px;
 		height: 60px;
 		border-radius: 38px;
-		background: #242424;
+		background: var(--color-gray3);
 		position: relative;
 		user-select: none;
 		transition: all 0.3s;
-		color: $color-white;
+		color: var(--color-white);
 		text-align: center;
 		font-family: $font-main;
 		font-size: 24px;
@@ -108,7 +108,7 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			position: absolute;
-			background-color: $color-accent;
+			background-color: var(--color-accent);
 			border-radius: 38px;
 			right: 0;
 		}
@@ -123,7 +123,7 @@
 		width: 381px;
 		height: 60px;
 		border-radius: 30px;
-		background: #343433;
+		background: var(--color-gray);
 		box-shadow: 0px 41px 21px -19px rgba(0, 0, 0, 0.15);
 		transition: all 0.3s;
 		@media screen and (max-width: 442px) {
@@ -145,10 +145,10 @@
 		display: none;
 		flex-grow: 1;
 		flex-shrink: 0;
-		background-color: $color-accent;
+		background-color: var(--color-accent);
 
 		border-radius: 38px;
-		color: $color-white;
+		color: var(--color-white);
 		font-family: $font-main;
 		font-size: 20px;
 		font-style: normal;
@@ -160,8 +160,8 @@
 		}
 
 		&:active {
-			background-color: #343433;
-			color: $color-accent;
+			background-color: var(--color-gray);
+			color: var(--color-accent);
 		}
 	}
 
@@ -169,11 +169,11 @@
 		flex-grow: 1;
 		flex-shrink: 0;
 		border-radius: 38px;
-		background-color: $color-gray;
+		background-color: var(--color-gray);
 		max-width: 0px;
 		overflow: hidden;
 		transition: max-width 0.5s;
-		color: $color-white;
+		color: var(--color-white);
 		font-family: $font-main;
 		font-size: 20px;
 		font-style: normal;
@@ -194,7 +194,7 @@
 	&__filter-checkbox {
 		width: 100%;
 		display: inline-block;
-		color: $color-white;
+		color: var(--color-white);
 		font-family: $font-main;
 		font-size: 20px;
 		font-style: normal;
@@ -207,20 +207,20 @@
 		height: 415px;
 		/* Для WebKit браузеров (Chrome, Safari) */
 		&::-webkit-scrollbar-thumb:vertical {
-			background-color: $color-gray3;
-			outline: 1px solid $color-gray3;
+			background-color: var(--color-gray3);
+			outline: 1px solid var(--color-gray3);
 		}
 		&::-webkit-scrollbar:vertical {
-			background-color: transparent; //$color-gray
+			background-color: transparent; //var(--color-gray)
 			width: 10px;
 		}
 		/* Для Firefox браузера */
 		&::-moz-scrollbar-thumb:vertical {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 
 		&::-moz-scrollbar:vertical {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 		}
 	}
 
@@ -235,10 +235,10 @@
 	&__filter-list-legend {
 		width: 90%;
 		margin: 15px;
-		background-color: $color-gray3;
+		background-color: var(--color-gray3);
 		border-radius: 7px;
 		padding: 5px 11px;
-		color: $color-white;
+		color: var(--color-white);
 		font-family: $font-main;
 		font-size: 20px;
 		font-style: normal;
@@ -257,7 +257,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		position: absolute;
-		background-color: $color-accent;
+		background-color: var(--color-accent);
 		border-radius: 38px;
 		right: 0;
 	}
@@ -301,23 +301,23 @@
 		max-width: 1026px;
 		width: 80%;
 		border-radius: 40px;
-		background-color: $color-gray;
+		background-color: var(--color-gray);
 		padding: 0;
 		/* Для WebKit браузеров (Chrome, Safari) */
 		&::-webkit-scrollbar-thumb:vertical {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 		&::-webkit-scrollbar:vertical {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 			width: 10px;
 		}
 		/* Для Firefox браузера */
 		&::-moz-scrollbar-thumb:vertical {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 
 		&::-moz-scrollbar:vertical {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 		}
 
 		@media screen and (max-width: 400px) {
@@ -385,7 +385,7 @@
 	}
 
 	&__main-block-title {
-		color: $color-white;
+		color: var(--color-white);
 		text-align: center;
 		font-family: $font-main;
 		font-size: 24px;
@@ -395,7 +395,7 @@
 	}
 
 	&__main-block-date {
-		color: #d3d3d3;
+		color: var(--color-gray5);
 		text-align: center;
 		font-family: $font-main;
 		font-size: 24px;
@@ -408,7 +408,7 @@
 	}
 
 	&__main-block-text {
-		color: $color-white;
+		color: var(--color-white);
 		font-family: $font-main;
 		font-size: 20px;
 		font-style: normal;
@@ -426,20 +426,20 @@
 		padding-bottom: 10px;
 		/* Для WebKit браузеров (Chrome, Safari) */
 		&::-webkit-scrollbar-thumb:horizontal {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 		&::-webkit-scrollbar:horizontal {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 			height: 30px;
-			outline: 1px solid $color-gray;
+			outline: 1px solid var(--color-gray);
 		}
 		/* Для Firefox браузера */
 		&::-moz-scrollbar-thumb:horizontal {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 
 		&::-moz-scrollbar:horizontal {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 		}
 	}
 
@@ -447,7 +447,7 @@
 		max-width: 278px;
 		scroll-snap-align: center;
 		border-radius: 25px;
-		border: 6px dashed #9c0;
+		border: 6px dashed var(--color-accent);
 		width: 28%;
 		height: 28dvh;
 		overflow: hidden;
@@ -476,7 +476,7 @@
 
 	&__item {
 		border-radius: 40px;
-		border: 6px dashed #9c0;
+		border: 6px dashed var(--color-accent);
 		max-width: 226.59px;
 		width: 100%;
 		aspect-ratio: 1 / 1;

@@ -1,56 +1,49 @@
-$font-main: "Montserrat", sans-serif;
-$font-second: "Caveat";
-$font-accent: "Luckiest Guy RUS-BEL-UKR";
-$font-inter: "Inter";
-
-$color-darkblue: #051534;
-$color-white: #ffffff;
-$color-lightblue: #8394b5;
-$color-black: #191919;
-$color-black2: #171717;
-$color-gray: #343433;
-$color-gray2: #302f2f;
-$color-gray3: #242424;
-$color-blue: #0f8ff9;
-$color-accent: #99cc00;
-$color-yellow: #dbefa9;
+// $font-main: "Montserrat", sans-serif;
+// $font-second: "Caveat";
+// $font-accent: "Luckiest Guy RUS-BEL-UKR";
+// $font-inter: "Inter";
+// $color-darkblue: #051534;
+// $color-white: #ffffff;
+// $color-lightblue: #8394b5;
+// $color-black: #191919;
+// $color-black2: #171717;
+// $color-gray: #343433;
+// $color-gray2: #302f2f;
+// $color-gray3: #242424;
+// $color-blue: #0f8ff9;
+// $color-accent: #99cc00;
+// $color-yellow: #dbefa9;
 
 :root {
-	--color-darkblue: #051534;
-	--color-white: #ffffff;
-	--color-lightblue: #8394b5;
-	--color-black: #f7f1f1;
-	--color-black2: #ffffff;
-	--color-gray: #c5c58e;
-	--color-gray2: #dbc8c8;
-	--color-gray3: #cfc0c0;
-	--color-blue: #143550;
-	--color-accent: #a0a397;
-	--color-yellow: #555752;
+	--color-darkblue: #342405;
+	--color-white: #000;
+	--color-lightblue: #b5a483;
+	--color-black: #fff;
+	--color-black2: #f4f7ef;
+	--color-gray: #cde4f1;
+	--color-gray2: #585856;
+	--color-gray3: #9c8ea0;
+	--color-gray4: #a3a3a3;
+	--color-gray5: #313131;
+	--color-blue: #5cb3fb;
+	--color-accent: #99cc00;
+	--color-yellow: #d6b6e2;
+	--color-green: #bbdad2;
 }
 
 .dark-mode {
 	--color-darkblue: #051534;
-	--color-white: #ffffff;
+	--color-white: #fff;
 	--color-lightblue: #8394b5;
 	--color-black: #191919;
 	--color-black2: #171717;
 	--color-gray: #343433;
 	--color-gray2: #302f2f;
 	--color-gray3: #242424;
+	--color-gray4: #d4d4d4;
+	--color-gray5: #d3d3d3;
 	--color-blue: #0f8ff9;
 	--color-accent: #99cc00;
 	--color-yellow: #dbefa9;
+	--color-green: #314200;
 }
-
-// @media (prefers-color-scheme: light) {
-// 	:root {
-// 		--color-black2: #171717;
-// 	}
-// }
-
-// @media (prefers-color-scheme: dark) {
-// 	:root {
-// 		--color-black2: red;
-// 	}
-// }

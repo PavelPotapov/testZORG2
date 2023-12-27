@@ -13,28 +13,28 @@
 	max-width: 1350px;
 	width: 80%;
 	border-radius: 40px;
-	background-color: $color-gray;
+	background-color: var(--color-gray);
 	padding: 0;
-	color: $color-white;
+	color: var(--color-white);
 	font-family: $font-main;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 124.023%;
 	/* Для WebKit браузеров (Chrome, Safari) */
 	&::-webkit-scrollbar-thumb:vertical {
-		background-color: $color-gray3;
+		background-color: var(--color-gray3);
 	}
 	&::-webkit-scrollbar:vertical {
-		background-color: $color-gray;
+		background-color: var(--color-gray);
 		width: 10px;
 	}
 	/* Для Firefox браузера */
 	&::-moz-scrollbar-thumb:vertical {
-		background-color: $color-gray3;
+		background-color: var(--color-gray3);
 	}
 
 	&::-moz-scrollbar:vertical {
-		background-color: $color-gray;
+		background-color: var(--color-gray);
 	}
 
 	@media screen and (max-width: 400px) {
@@ -63,7 +63,7 @@
 	}
 
 	&__title {
-		color: $color-accent;
+		color: var(--color-accent);
 		font-size: clamp(24px, 4vw, 48px);
 		font-weight: 700;
 		line-height: 100.523%;
@@ -101,7 +101,7 @@
 	}
 
 	&__contact-us-title {
-		color: $color-accent;
+		color: var(--color-accent);
 		text-align: center;
 		font-family: $font-second;
 		font-size: clamp(24px, 4vw, 48px);
@@ -128,19 +128,19 @@
 		margin-bottom: 30px;
 		/* Для WebKit браузеров (Chrome, Safari) */
 		&::-webkit-scrollbar-thumb:vertical {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 		&::-webkit-scrollbar:vertical {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 			width: 10px;
 		}
 		/* Для Firefox браузера */
 		&::-moz-scrollbar-thumb:vertical {
-			background-color: $color-gray3;
+			background-color: var(--color-gray3);
 		}
 
 		&::-moz-scrollbar:vertical {
-			background-color: $color-gray;
+			background-color: var(--color-gray);
 		}
 	}
 
@@ -233,7 +233,7 @@
 		padding-right: clamp(10px, 5vw, 75px); //20px 75px;
 		max-width: 291px;
 		min-height: 56px;
-		color: $color-black;
+		color: var(--color-black);
 		text-align: center;
 		font-family: $font-main;
 		font-size: clamp(12px, 2vw, 24px);
@@ -241,7 +241,7 @@
 		font-weight: 700;
 		line-height: 100.523%;
 		border-radius: 18px;
-		background-color: $color-accent;
+		background-color: var(--color-accent);
 	}
 
 	&--open {

@@ -1,5 +1,6 @@
 .activity {
 	position: relative;
+	opacity: 0;
 	padding-bottom: 155px;
 	@media screen and (max-width: 800px) {
 		padding-bottom: 90px;
@@ -18,7 +19,7 @@
 	}
 
 	&__title {
-		color: $color-white;
+		color: var(--color-white);
 		margin-left: 50%;
 		transform: translateX(-50%);
 		display: inline-block;

@@ -2,7 +2,7 @@ $size-laptop-menu: 408px;
 
 .laptop-menu {
 	justify-content: space-between;
-	color: $color-white;
+	color: var(--color-white);
 	font-family: $font-main;
 	font-size: 22px;
 	font-style: normal;
@@ -18,7 +18,7 @@ $size-laptop-menu: 408px;
 	transition: transform 0.5s;
 	border-radius: 10px 0 0 0;
 	z-index: 6;
-	border: 6px dashed $color-accent;
+	border: 6px dashed var(--color-accent);
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -52,9 +52,9 @@ $size-laptop-menu: 408px;
 
 	&__item {
 		transition: color 0.3s;
-		color: $color-white;
+		color: var(--color-white);
 		&:hover {
-			color: $color-accent;
+			color: var(--color-accent);
 		}
 	}
 

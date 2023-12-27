@@ -1,6 +1,7 @@
 .gallery {
 	padding-top: calc(77px + 75px);
 	padding-bottom: 108px;
+	opacity: 0;
 
 	@media screen and (max-width: 500px) {
 		padding-top: 100px;

@@ -1,5 +1,5 @@
 ._404 {
-	color: $color-white;
+	color: var(--color-white);
 	text-align: center;
 	font-family: $font-main;
 	font-size: clamp(3vw, 40vw + 1rem, 50vw);

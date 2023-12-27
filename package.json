@@ -16,7 +16,10 @@
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.28",
 		"autoprefixer": "^10.4.16",
+		"gsap": "^3.12.4",
 		"sass": "^1.69.4",
+		"scrollmagic": "^2.0.8",
+		"scrollmagic-plugin-gsap": "^1.0.4",
 		"swiper": "^11.0.4",
 		"taffydb": "^2.7.3",
 		"toastify-js": "^1.12.0",

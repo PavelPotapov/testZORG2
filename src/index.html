@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="dark-mode">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -507,7 +507,10 @@
 								</div>
 							</div>
 							<a href="/pages/advance.html">
-								<div class="carrier__vacancy-card carrier__vacancy-card--more">
+								<div
+									class="carrier__vacancy-card carrier__vacancy-card--more"
+									data-js="vacancy-item"
+								>
 									<div class="carrier__vacancy-card--more-title">
 										Полный список вакансий
 									</div>
@@ -522,7 +525,7 @@
 											<circle cx="33" cy="33" r="33" fill="#99CC00" />
 											<path
 												d="M14.4878 32.9996H47.8795M38.2705 44.6316L49.1872 33.7149C49.5822 33.3199 49.5822 32.6794 49.1872 32.2844L38.2705 21.3677"
-												stroke="#343433"
+												stroke="currentColor"
 												stroke-width="6.6"
 												stroke-linecap="round"
 											/>
@@ -612,6 +615,9 @@
 		<script type="module" src="./js/main.js"></script>
 		<script type="module" src="./js/contactForm.js"></script>
 		<script type="module" src="./js/swiper.js"></script>
+		<!-- ColorTheme -->
 		<script type="module" src="./js/colorTheme.js"></script>
+		<!-- Animation -->
+		<script type="module" src="./js/animation/animationForMainPage.js"></script>
 	</body>
 </html>

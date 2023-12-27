@@ -23,11 +23,8 @@
 				<li class="nav__item"><a href="#">Контакты</a></li>
 			</ul>
 		</nav>
-		<button type="button" style="color:red" data-js="change-color-theme">Смена
-			темы</button>
 		<div class="change-language" data-js="change-language">
-
-			<select id="courses" style="color: white">
+			<select id="languages">
 				<option value="EN">EN</option>
 				<option value="EN2">EN2</option>
 				<option value="EN3">EN3</option>
@@ -35,6 +32,7 @@
 				<option value="EN5">EN5</option>
 			</select>
 		</div>
+		{{> themeChecker}}
 		<div class="burger" data-js="burger"></div>
 	</header>
 </div>

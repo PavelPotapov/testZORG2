@@ -3,7 +3,7 @@
 	max-width: 280px;
 	min-height: 56px;
 	padding: 16px 35px;
-	background-color: $color-gray2;
+	background-color: var(--color-gray2);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 30px;
 	position: relative;
@@ -21,7 +21,7 @@
 	}
 
 	&:focus {
-		border: 3px dashed $color-accent;
+		border: 3px dashed var(--color-accent);
 	}
 
 	&::placeholder {
@@ -38,7 +38,7 @@
 	width: 100%;
 	max-width: 1230px;
 	min-height: 214px;
-	background-color: $color-gray2;
+	background-color: var(--color-gray2);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	padding: 15px;
 	margin-right: 10px;
@@ -57,7 +57,7 @@
 
 	&:focus {
 		outline: none;
-		border: 3px dashed $color-accent;
+		border: 3px dashed var(--color-accent);
 	}
 }
 

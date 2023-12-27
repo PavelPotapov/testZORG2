@@ -138,7 +138,8 @@ class FilterHelper {
 	//если данных от сервера нет - создаем пустой элемент с уведомлением
 	emptyData(msg) {
 		const info = createElement("p", {
-			style: "color: #fff; font-size: 20px; font-family: Montserrat",
+			style:
+				"color: var(--color-white); font-size: 20px; font-family: Montserrat",
 			"data-js": "game-item",
 		})
 		info.textContent = msg

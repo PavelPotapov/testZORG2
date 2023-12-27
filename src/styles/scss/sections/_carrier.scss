@@ -1,7 +1,7 @@
 .carrier {
 	position: relative;
 	font-family: $font-main;
-	color: $color-white;
+	color: var(--color-white);
 	margin-bottom: 73px;
 	user-select: none;
 	&__title {
@@ -78,7 +78,7 @@
 	}
 
 	&__subtitle {
-		color: $color-white;
+		color: var(--color-white);
 		text-align: center;
 		font-family: $font-main;
 		font-size: clamp(14px, 4vw, 24px);
@@ -132,6 +132,10 @@
 				margin-bottom: 60px;
 			}
 		}
+
+		&--more-circle svg {
+			color: var(--color-gray);
+		}
 	}
 
 	&__vacancy-card {
@@ -141,18 +145,14 @@
 		width: min(438.866px, 85vw);
 		height: 267.213px;
 		border-radius: 17.696px;
-		background: $color-yellow;
+		background: var(--color-yellow);
 		box-shadow: 0px 41px 21px -19px rgba(0, 0, 0, 0.15);
 		transition: transform 0.3s;
 		cursor: pointer;
 		&:hover {
 			transform: scale(1.04);
-			// .carrier__vacancy-circle {
-			// 	& svg {
-			// 		fill: $color-accent;
-			// 	}
-			// }
 		}
+		opacity: 0;
 	}
 
 	&__vacancy-card-inner {
@@ -164,13 +164,13 @@
 
 	&__vacancy-circle {
 		& svg {
-			fill: $color-black;
+			fill: var(--color-black);
 		}
 	}
 
 	&__vacancy-card-title {
 		align-self: flex-end;
-		color: $color-black;
+		color: var(--color-black);
 		font-family: $font-main;
 		font-style: normal;
 		line-height: 200%;
@@ -189,7 +189,7 @@
 	}
 
 	&__vacancy-card--more {
-		background: $color-gray;
+		background: var(--color-gray);
 		box-shadow: 0px 41px 21px -19px rgba(0, 0, 0, 0.15);
 		flex-direction: column;
 		justify-content: end;
@@ -198,7 +198,7 @@
 
 	&__vacancy-card--more-title {
 		align-self: center;
-		color: $color-accent;
+		color: var(--color-accent);
 		font-family: $font-main;
 		text-align: center;
 		font-size: 32px;
@@ -208,6 +208,7 @@
 	}
 
 	&__application {
+		opacity: 0;
 		display: flex;
 		justify-content: space-between;
 		padding: 0 98px;
@@ -230,18 +231,18 @@
 
 	&__application-personal {
 		font-weight: 700;
-		border-bottom: 1px solid $color-white;
+		border-bottom: 1px solid var(--color-white);
 	}
 
 	&__application-input {
 		width: min(655px, 85vw);
 		height: 54px;
 		border-radius: 14px;
-		border: 1px solid $color-accent;
-		background: $color-black;
+		border: 1px solid var(--color-accent);
+		background: var(--color-black);
 		padding: 17px 20px;
 		&::placeholder {
-			color: $color-white;
+			color: var(--color-white);
 		}
 	}
 

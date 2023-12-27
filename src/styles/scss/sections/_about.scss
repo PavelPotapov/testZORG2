@@ -1,4 +1,5 @@
 .about {
+	opacity: 0;
 	padding-top: 237px;
 	@media screen and (max-width: 1391px) {
 		padding-top: 75px;
@@ -29,7 +30,7 @@
 	}
 
 	&__zorg-games-title {
-		color: $color-white;
+		color: var(--color-white);
 		font-size: 64px;
 		font-style: normal;
 		font-weight: 700;
@@ -41,7 +42,7 @@
 	}
 
 	&__zorg-games-subtitle {
-		color: $color-white;
+		color: var(--color-white);
 		text-align: center;
 		font-family: $font-main;
 		font-size: clamp(18px, 4vw, 28px);

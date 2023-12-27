@@ -1,5 +1,5 @@
 .clock-loader {
-	--clock-color: #9c0;
+	--clock-color: var(--color-accent);
 	--clock-width: 4rem;
 	--clock-radius: calc(var(--clock-width) / 2);
 	--clock-minute-length: calc(var(--clock-width) * 0.4);

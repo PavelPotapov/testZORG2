@@ -32,7 +32,7 @@
 	}
 
 	&-info {
-		color: #9c0;
+		color: var(--color-accent);
 		transform: rotate(-28.671deg);
 		grid-column: 4 / 6;
 		justify-self: end;
@@ -86,7 +86,7 @@
 	}
 
 	&-info--right {
-		color: #9c0;
+		color: var(--color-accent);
 		transform: rotate(28.671deg);
 		grid-column: 8 / 10;
 		text-align: right;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- data-js-portfolio-detail-start атрибут задавай в случае, если надо открыть страницу с уже открытым popup окном, это происходит, например, если с главной страницы открывают детальную страницу игры (по сути popup) -->
 <html
+	class="dark-mode"
 	lang="ru"
 	data-js-portfolio-detail-start='{"images":["../img/demo.png","../img/team.png","../img/team.png"],"logo":"../img/team.png","title":"Brawl Royale","date":"25.05.2022","text":"Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}'
 >
@@ -956,8 +957,9 @@
 		<!-- Loader -->
 		<div class="clock-loader__overlay" data-js="loader-overlay"></div>
 		<div class="clock-loader" data-js="clock-loader"></div>
-
 		<script type="module" src="../js/main.js"></script>
 		<script type="module" src="../js/portfolio/filter.js"></script>
+		<!-- ColorTheme -->
+		<script type="module" src="../js/colorTheme.js"></script>
 	</body>
 </html>

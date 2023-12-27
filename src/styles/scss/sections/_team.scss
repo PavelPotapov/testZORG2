@@ -2,8 +2,10 @@
 	user-select: none;
 	text-align: center;
 	position: relative;
-	color: $color-white;
+	color: var(--color-white);
 	padding-bottom: 153px;
+	opacity: 0;
+	transform: translateX(-50px);
 	@media screen and (max-width: 800px) {
 		padding-bottom: 90px;
 	}
@@ -127,7 +129,7 @@
 	&__photo {
 		box-shadow: -7px -3px 41px 8px rgba(34, 60, 80, 0.2);
 		position: relative;
-		color: $color-black;
+		color: var(--color-black);
 		text-align: center;
 		font-family: $font-second;
 		font-size: 27.628px;
@@ -138,7 +140,7 @@
 		max-width: 515px;
 		height: 100%;
 		min-height: 588px;
-		background-color: $color-white;
+		background-color: var(--color-white);
 		transform: rotate(3.741deg);
 		padding: 36px;
 		display: flex;
@@ -214,7 +216,7 @@
 
 	&__subtitle {
 		margin: 0 auto;
-		color: $color-white;
+		color: var(--color-white);
 		text-align: center;
 		font-family: $font-main;
 		font-size: clamp(15px, 3vw, 24px);

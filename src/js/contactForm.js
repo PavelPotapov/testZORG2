@@ -205,7 +205,7 @@ class ContactFormHelper {
 				через изменение max-height будет выглядеть некрасиво, постоянно отображая вертикальный скролл
 				до момент полного открытия формы
 				*/
-				delay(500).then(() => (this.contactFormModal.style.overflowY = "auto"))
+				delay(600).then(() => (this.contactFormModal.style.overflowY = "auto"))
 			} else {
 				//закрываем форму
 				this.contactFormModal.classList.remove(this.classes.openContactForm)
