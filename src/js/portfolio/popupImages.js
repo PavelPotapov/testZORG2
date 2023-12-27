@@ -11,7 +11,7 @@ import {
  * Класс для открытия модального окна игры
  *@class
  */
-class PopupHelper {
+export class PopupHelper {
 	/**
 	 * @constructor
 	 * @returns {PopupHelper.instance} ссылка на единственный экземпляр
@@ -53,7 +53,8 @@ class PopupHelper {
 			text: `[data-js="popup-text"]`,
 			date: `[data-js="popup-date"]`,
 			title: `[data-js="popup-title"]`,
-			detail: `data-js-portfolio-detail`,
+			detail: `data-js-portfolio-detail`, //именно строка, чтобы по названию с помощью функции вытащить информацию из data атрибута
+			htmlDetail: `data-js-portfolio-detail-start`, //именно строка, чтобы по названию с помощью функции вытащить информацию из data атрибута
 			overlay: `[data-js="popup-overlay"]`,
 			item: `[data-js="game-item"]`,
 			itemsContainer: `[data-js="portfolio-content"]`,
@@ -93,7 +94,24 @@ class PopupHelper {
 		//Вызываем внутренние методы в конструкторе
 		this.findElements()
 		this.acceptEvents()
+		this.getStartConfiguration()
 		return PopupHelper.instance
+	}
+
+	/**
+	 * Внутренний метод необходимый для открытия popup окна в случае, если задана стартовая конфигурация у тега html
+	 * Если пользователь с главной страницы будет переходить например по url "/pages/portfolio?id=243" - это значит, что эта страница должна открыть уже по умолчанию с открытым popup, тогда backend отдает страницу со сгенерированными данными для модального окна в дата атрибуте this.selectors.htmlDetail и оно автоматически открывается
+	 * @method
+	 * @returns {undefined}
+	 */
+	getStartConfiguration() {
+		this.htmlDetail = getDataFromDataJS(
+			document.documentElement,
+			this.selectors.htmlDetail
+		)
+		if (this.htmlDetail) {
+			this.togglePopup(document.documentElement, this.selectors.htmlDetail)
+		}
 	}
 
 	findElements() {
@@ -136,6 +154,7 @@ class PopupHelper {
 	 * @param {HTMLElement | undefined} item Если item пустой, значит вызывали метод закрытия окна.
 	 * Внутри элемента должен находиться дата атрибут который находится в selectors.detail. Внутри этого атрибута должная лежать строка из сериализованного объекта
 	 * Поля объекта:
+	 * @param {String | undefined} selector строка селектора дата атрибута из которого достаются данные popup окна.
 	 * @param {date} item.date - дата релиза игры
 	 * @param {String[]} images - список ссылок на скриншоты игры
 	 * @param {String} logo	- ссылка на логотип игры
@@ -143,7 +162,7 @@ class PopupHelper {
 	 * @param {String} title - заголовок игры
 	 * @returns {Promise}
 	 */
-	async togglePopup(item) {
+	async togglePopup(item, selector) {
 		this.state.open = !this.state.open
 		if (this.state.open) {
 			//отключаем скролл на всей странице
@@ -151,7 +170,7 @@ class PopupHelper {
 			//очищаем внутри popup все внутренние картинки, если они там были
 			await this.clearImages()
 			//получаем данные из data атрибута элемента, по которому кликнули
-			const detailData = getDataFromDataJS(item, this.selectors.detail)
+			const detailData = getDataFromDataJS(item, selector)
 			console.log(detailData)
 			//заменяем данные внутри popup на те, что были в data атрибуте
 			this.logo.src = detailData.logo
@@ -221,7 +240,7 @@ class PopupHelper {
 	}
 
 	itemClick(item) {
-		this.togglePopup(item)
+		this.togglePopup(item, this.selectors.detail)
 	}
 
 	bindItemsClick() {
@@ -242,4 +261,4 @@ class PopupHelper {
 	}
 }
 
-export const popupHelper = new PopupHelper()
+// export const popupHelper = new PopupHelper()

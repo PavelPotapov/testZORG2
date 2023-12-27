@@ -3,7 +3,7 @@
  *
  * @class
  */
-class Loader {
+export class Loader {
 	/**
 	 * @constructor
 	 * @returns {Loader.instance} - ссылка на единственный экземпляр Loader на странице.
@@ -65,5 +65,3 @@ class Loader {
 		this.overlay.classList.remove(this.classes.overlayActive)
 	}
 }
-
-export const singleToneLoader = new Loader()

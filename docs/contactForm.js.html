@@ -292,22 +292,22 @@ class ContactFormHelper {
 			this.loader.showLoader()
 			const response = await postFormRequest(url, formData)
 			if (response) {
-				this.loader.hideLoader()
 				createSuccessfulToast()
-				//закрываем форму
-				this.toggleModalContact()
-				//ждем пока закроется форма
-				await delay(500)
-				//чистим контент внутри формы
-				this.clearContents()
-				//удаляем загруженный файл
-				this.clearFormBtn.click()
 			} else {
 				createErrorToast()
 			}
 		} catch (err) {
-			this.loader.hideLoader()
 			createErrorToast()
+		} finally {
+			this.loader.hideLoader()
+			//закрываем форму
+			this.toggleModalContact()
+			//ждем пока закроется форма
+			await delay(500)
+			//чистим контент внутри формы
+			this.clearContents()
+			//удаляем загруженный файл
+			this.clearFormBtn.click()
 		}
 	}
 

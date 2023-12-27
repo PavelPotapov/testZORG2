@@ -92,5 +92,11 @@
 		font-weight: 400;
 		line-height: normal;
 		letter-spacing: 0.3px;
+
+		&-policy {
+			&:hover {
+				border-bottom: 2px solid $color-blue;
+			}
+		}
 	}
 }

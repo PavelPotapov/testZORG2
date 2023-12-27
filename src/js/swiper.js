@@ -1,26 +1,24 @@
 import Swiper from "swiper/bundle"
 // import styles bundle
 import "swiper/css/bundle"
+import { delay } from "./utils"
 
-var swiper = new Swiper(".swiper", {
+export const swiper = new Swiper(".swiper-container", {
 	effect: "coverflow",
 	grabCursor: true,
 	centeredSlides: true,
-	slidesPerView: 3,
-	pagination: {
-		el: ".swiper-pagination",
-		dynamicMainBullets: 5,
-		clickable: true,
-	},
+	slidesPerView: 1.5,
 	coverflowEffect: {
-		rotate: 0,
+		rotate: -8,
 		stretch: 0,
-		depth: 100,
+		depth: 200,
 		modifier: 4,
 		slideShadows: true,
 	},
 	loop: true,
-	// Navigation arrows
+	autoplay: {
+		delay: 5000,
+	},
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
@@ -28,26 +26,22 @@ var swiper = new Swiper(".swiper", {
 	keyboard: {
 		enabled: true,
 	},
-
-	spaceBetween: 0,
-	centeredSlides: true,
-	effect: "creative",
-	autoplay: {
-		delay: 1000, // время задержки между сменой слайдов (в миллисекундах)
-		disableOnInteraction: true, // отключение автопрокрутки при взаимодействии пользователя
+	mousewheel: {
+		thresholdDelta: 70,
 	},
-	// mousewheel: {
-	// 	thresholdDelta: 70,
-	// },
-	// breakpoints: {
-	// 	560: {
-	// 		slidesPerView: 2.5,
-	// 	},
-	// 	768: {
-	// 		slidesPerView: 3,
-	// 	},
-	// 	1024: {
-	// 		slidesPerView: 3,
-	// 	},
-	// },
+	breakpoints: {
+		400: {
+			slidesPerView: 1.5,
+		},
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		dynamicMainBullets: 5,
+		clickable: true,
+	},
+})
+
+//если это не сделать, то почему-то autoplay не работает, он сработает только после взаимодействия со слайдером
+delay(5000).then(() => {
+	swiper.slideNext()
 })

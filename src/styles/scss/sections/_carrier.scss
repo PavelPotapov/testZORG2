@@ -3,7 +3,7 @@
 	font-family: $font-main;
 	color: $color-white;
 	margin-bottom: 73px;
-
+	user-select: none;
 	&__title {
 		margin-left: 50%;
 		transform: translateX(-50%);
@@ -26,7 +26,7 @@
 			position: absolute;
 			left: calc(-70px - 40px);
 			top: -50%;
-			background-image: url("../../../public/img/map.svg");
+			background-image: url("/img/map.svg");
 			background-repeat: no-repeat;
 			background-size: cover;
 
@@ -44,7 +44,7 @@
 			left: 0;
 			bottom: 0;
 			transform: translateX(calc(-125%));
-			background-image: url("../../../public/img/line-left.svg");
+			background-image: url("/img/line-left.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
 
@@ -96,11 +96,11 @@
 	&::before {
 		content: "";
 		width: 12vw;
-		height: 125%;
+		height: 55vw;
 		position: absolute;
 		left: 0;
-		top: -8vw;
-		background-image: url("../../../public/img/circle-left.svg");
+		top: -44vw;
+		background-image: url("/img/circle-left.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
 		z-index: -1;

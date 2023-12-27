@@ -11,7 +11,7 @@
 		position: absolute;
 		right: 0;
 		top: -17vw;
-		background-image: url("../../../public/img/circle-tight-small.svg");
+		background-image: url("/img/circle-tight-small.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
 		z-index: -1;
@@ -42,7 +42,7 @@
 			position: absolute;
 			right: calc(-70px - 40px);
 			top: -50%;
-			background-image: url("../../../public/img/map.svg");
+			background-image: url("/img/map.svg");
 			background-repeat: no-repeat;
 			background-size: cover;
 
@@ -64,7 +64,7 @@
 			left: 58vw;
 			bottom: 0;
 			transform: translateX(calc(-125%)) rotate(180deg);
-			background-image: url("../../../public/img/line-left.svg");
+			background-image: url("/img/line-left.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
 

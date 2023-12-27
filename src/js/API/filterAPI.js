@@ -5,8 +5,8 @@
  * @returns {Object[] | Error} - ответ список объектов для отображения на странице профиля 
  * @example
  * Что жду от сервера
- * [{"images": ["../../public/img/team.png", "../../public/img/team.png", "../../public/img/team.png"], "logo": "../../public/img/team.png",
-    "title": "Brawl Royale", "date": "25.05.2022", "text": "Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}, {"images": ["../../public/img/team.png", "../../public/img/team.png", "../../public/img/team.png"], "logo": "../../public/img/team.png", "title": "Brawl Royale", "date": "25.05.2022", "text": "Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}, {"images": ["../../public/img/team.png", "../../public/img/team.png", "../../public/img/team.png"], "logo": "../../public/img/team.png", "title": "Brawl Royale", "date": "25.05.2022", "text": "Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}]
+ * [{"images": ["/img/team.png", "/img/team.png", "/img/team.png"], "logo": "/img/team.png",
+    "title": "Brawl Royale", "date": "25.05.2022", "text": "Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}, {"images": ["/img/team.png", "/img/team.png", "/img/team.png"], "logo": "/img/team.png", "title": "Brawl Royale", "date": "25.05.2022", "text": "Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}, {"images": ["/img/team.png", "/img/team.png", "/img/team.png"], "logo": "/img/team.png", "title": "Brawl Royale", "date": "25.05.2022", "text": "Lorem ipsum dolor sit amet consectetur. Massa id lobortis viverra interdum."}]
  */
 export async function postFilterRequest(url, formData) {
 	try {

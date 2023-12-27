@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <meta name="theme-color" media="(prefers-color-scheme: light)" /> -->
 		<title>{{title}}</title>
 	</head>
 	<body>
@@ -12,28 +13,87 @@
 				<section class="gallery">
 					<div class="container">
 						<div class="gallery__swiper">
-							<div class="swiper mySwiper">
+							<div class="swiper-container">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
+									<div
+										class="swiper-slide swiper-slide-prev"
+										data-swiper-slide-index="1"
+									>
+										<div class="swiper-zoom-container">
+											<video
+												id="wp-custom-header-video"
+												autoplay
+												loop
+												playsinline
+												width="0"
+												height="0"
+												src="https://zorg-games.com/wp-content/uploads/2021/07/Zorg-Games.com-Zorg.Games-Intro-Video-Zorg-Games-Ver.1.mp4"
+											></video>
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
+									<div
+										class="swiper-slide swiper-slide-prev"
+										data-swiper-slide-index="1"
+									>
+										<div class="swiper-zoom-container">
+											<img
+												alt=""
+												class="swiper-lazy swiper-lazy-loaded undefined"
+												src="https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg"
+											/>
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
+									<div
+										class="swiper-slide swiper-slide-prev"
+										data-swiper-slide-index="1"
+									>
+										<div class="swiper-zoom-container">
+											<img
+												alt=""
+												class="swiper-lazy swiper-lazy-loaded undefined"
+												src="https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg"
+											/>
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
+									<div
+										class="swiper-slide swiper-slide-prev"
+										data-swiper-slide-index="1"
+									>
+										<div class="swiper-zoom-container">
+											<video
+												id="wp-custom-header-video"
+												autoplay
+												loop
+												playsinline
+												width="0"
+												height="0"
+												src="https://zorg-games.com/wp-content/uploads/2021/07/Zorg-Games.com-Zorg.Games-Intro-Video-Zorg-Games-Ver.1.mp4"
+											></video>
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
+									<div
+										class="swiper-slide swiper-slide-prev"
+										data-swiper-slide-index="1"
+									>
+										<div class="swiper-zoom-container">
+											<img
+												alt=""
+												class="swiper-lazy swiper-lazy-loaded undefined"
+												src="./public//img/team.png"
+											/>
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
-									</div>
-									<div class="swiper-slide">
-										<img src="./public//img/demo.png" alt="img1" />
+									<div
+										class="swiper-slide swiper-slide-prev"
+										data-swiper-slide-index="1"
+									>
+										<div class="swiper-zoom-container">
+											<img
+												alt=""
+												class="swiper-lazy swiper-lazy-loaded undefined"
+												src="https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg"
+											/>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -74,7 +134,9 @@
 						</div>
 						<div class="arrow">
 							<div class="arrow-info">Узнать больше</div>
-							<a href="#" class="arrow-btn block btn">студия</a>
+							<a href="./pages/studia.html" class="arrow-btn block btn"
+								>студия</a
+							>
 						</div>
 					</div>
 				</section>
@@ -155,12 +217,54 @@
 											loading="lazy"
 									/></a>
 								</div>
-								<div class="projects__item"></div>
-								<div class="projects__item"></div>
-								<div class="projects__item"></div>
-								<div class="projects__item"></div>
+								<div class="projects__item">
+									<a href="#" target="_blank"
+										><img
+											src="./public/img/team.png"
+											alt="Browl Logo"
+											loading="lazy"
+											width="97"
+											height="97"
+											loading="lazy"
+									/></a>
+								</div>
+								<div class="projects__item">
+									<a href="#" target="_blank"
+										><img
+											src="./public/img/team.png"
+											alt="Browl Logo"
+											loading="lazy"
+											width="97"
+											height="97"
+											loading="lazy"
+									/></a>
+								</div>
+								<div class="projects__item">
+									<a href="#" target="_blank"
+										><img
+											src="./public/img/team.png"
+											alt="Browl Logo"
+											loading="lazy"
+											width="97"
+											height="97"
+											loading="lazy"
+									/></a>
+								</div>
+								<div class="projects__item">
+									<a href="#" target="_blank"
+										><img
+											src="./public/img/team.png"
+											alt="Browl Logo"
+											loading="lazy"
+											width="97"
+											height="97"
+											loading="lazy"
+									/></a>
+								</div>
 								<div class="projects__item--more">
-									<img src="./public/img/+.svg" alt="+" loading="lazy" />
+									<a href="./pages/portfolio.html"
+										><img src="./public/img/+.svg" alt="+" loading="lazy"
+									/></a>
 								</div>
 							</div>
 						</div>
@@ -185,13 +289,15 @@
 									<div class="arrow-info">
 										Детальнее&nbsp;&nbsp;&nbsp;&nbsp;
 									</div>
-									<a href="" class="arrow-btn block btn">УСЛУГИ</a>
+									<a href="./pages/facility.html" class="arrow-btn block btn"
+										>УСЛУГИ</a
+									>
 								</div>
 							</div>
 						</div>
 						<div class="services__partners">
 							<div class="services__partners-item">
-								<a href="" target="_blank">
+								<a href="https://wannaplay.gg/" target="_blank">
 									<img
 										class="block"
 										src="./public/img/partners/WannaPlay.png"
@@ -201,7 +307,7 @@
 								</a>
 							</div>
 							<div class="services__partners-item">
-								<a href="" target="_blank">
+								<a href="https://hitappsgames.com/" target="_blank">
 									<img
 										class="block"
 										src="./public/img/partners/HITAPPS-LOGO.png"
@@ -211,7 +317,10 @@
 								</a>
 							</div>
 							<div class="services__partners-item">
-								<a href="" target="_blank">
+								<a
+									href="https://madpixel.dev/ru/madpixel_duplicate/"
+									target="_blank"
+								>
 									<img
 										class="block"
 										src="./public/img/partners/Mad-Pixel-Games-LTD-Logo.png"
@@ -222,7 +331,7 @@
 								</a>
 							</div>
 							<div class="services__partners-item">
-								<a href="" target="_blank">
+								<a href="https://say.games/" target="_blank">
 									<img
 										class="block"
 										src="./public/img/partners/SayGames-Logo.png"
@@ -232,7 +341,7 @@
 								</a>
 							</div>
 							<div class="services__partners-item">
-								<a href="" target="_blank">
+								<a href="https://azurgames.com/ru/main/" target="_blank">
 									<img
 										class="block"
 										src="./public/img/partners/Azur-Games.png"
@@ -242,7 +351,7 @@
 								</a>
 							</div>
 							<div class="services__partners-item">
-								<a href="" target="_blank">
+								<a href="https://vaveda.games/" target="_blank">
 									<img
 										src="./public/img/partners/vaveda.png"
 										alt="Vaveda"
@@ -502,5 +611,7 @@
 		<!-- Scripts -->
 		<script type="module" src="./js/main.js"></script>
 		<script type="module" src="./js/contactForm.js"></script>
+		<script type="module" src="./js/swiper.js"></script>
+		<script type="module" src="./js/colorTheme.js"></script>
 	</body>
 </html>

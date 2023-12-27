@@ -4,7 +4,7 @@ import { clearChildElements, createElement } from "../utils"
  * Класс для упрощения взаимодействия с элементами, которые триггерят открытия модального окна просмотра информации об игре
  * @class
  */
-class GameItemsHelper {
+export class GameItemsHelper {
 	/**
 	 * @constructor
 	 * @returns {GameItemsHelper.instance} - ссылка на единственный экземпляр класса
@@ -114,4 +114,4 @@ class GameItemsHelper {
 	}
 }
 
-export const gameItemsHelper = new GameItemsHelper()
+// export const gameItemsHelper = new GameItemsHelper()

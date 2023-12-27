@@ -52,7 +52,7 @@
 			bottom: -50%;
 			transform: rotate(28.431deg) translateX(25%);
 			background-repeat: no-repeat;
-			background-image: url("../../../public/img/arrow.svg");
+			background-image: url("/img/arrow.svg");
 			@media screen and (max-width: 600px) {
 				font-size: 16px;
 				background-size: contain;
@@ -105,7 +105,7 @@
 			bottom: -243%;
 			transform: rotateZ(340deg) rotateY(180deg) rotateX(0);
 			background-repeat: no-repeat;
-			background-image: url("../../../public/img/arrow.svg");
+			background-image: url("/img/arrow.svg");
 
 			@media screen and (max-width: 747px) {
 				height: 200%;

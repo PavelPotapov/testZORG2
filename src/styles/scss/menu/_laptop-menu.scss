@@ -14,7 +14,7 @@ $size-laptop-menu: 408px;
 	position: fixed;
 	top: 75px;
 	right: -$size-laptop-menu;
-	background-color: $color-black2;
+	background-color: var(--color-black2);
 	transition: transform 0.5s;
 	border-radius: 10px 0 0 0;
 	z-index: 6;

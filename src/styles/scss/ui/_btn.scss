@@ -13,13 +13,14 @@
 	line-height: normal;
 	letter-spacing: 0.639px;
 	text-transform: uppercase;
-	background-image: url("../../../public/img/btn.svg");
-
-
-	@media screen and (max-width: 700px){
-		width: 150px;
-		font-size: 25px;		
+	background-image: url("/img/btn.svg");
+	transition: 0.3s all;
+	&:hover {
+		transform: scale(1.05);
 	}
 
-	
+	@media screen and (max-width: 700px) {
+		width: 150px;
+		font-size: 25px;
+	}
 }

@@ -1,5 +1,5 @@
 import { postFormRequest } from "./API/contactFormAPI"
-import { singleToneLoader } from "./loader"
+import { Loader } from "./loader"
 import {
 	clearChildElements,
 	createElement,
@@ -81,10 +81,10 @@ class ContactFormHelper {
 		}
 		/**
 		 * Объект loader для отображения во время отправки / загрузки
-		 * Ссылается на единственный уже созданный объект класса Loader
+		 * Ссылается на объект класса Loader
 		 * @type {Loader}
 		 */
-		this.loader = singleToneLoader
+		this.loader = new Loader()
 		//Вызываем внутренние методы в конструкторе
 		this.findElements()
 		this.acceptEvents()
@@ -251,22 +251,22 @@ class ContactFormHelper {
 			this.loader.showLoader()
 			const response = await postFormRequest(url, formData)
 			if (response) {
-				this.loader.hideLoader()
 				createSuccessfulToast()
-				//закрываем форму
-				this.toggleModalContact()
-				//ждем пока закроется форма
-				await delay(500)
-				//чистим контент внутри формы
-				this.clearContents()
-				//удаляем загруженный файл
-				this.clearFormBtn.click()
 			} else {
 				createErrorToast()
 			}
 		} catch (err) {
-			this.loader.hideLoader()
 			createErrorToast()
+		} finally {
+			this.loader.hideLoader()
+			//закрываем форму
+			this.toggleModalContact()
+			//ждем пока закроется форма
+			await delay(500)
+			//чистим контент внутри формы
+			this.clearContents()
+			//удаляем загруженный файл
+			this.clearFormBtn.click()
 		}
 	}
 

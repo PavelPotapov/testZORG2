@@ -4,7 +4,7 @@ import { disableScroll, enableScroll } from "./utils"
  * Класс для Burger
  * @class
  */
-class Burger {
+export class Burger {
 	/**
 	 *
 	 * @param {Object} param - объект параметров
@@ -33,7 +33,7 @@ class Burger {
 		 * @property {boolean} open - показан ли burger
 		 */
 		this.state = {
-			open: false,
+			isOpen: false,
 		}
 		/**
 		 * Классы для управления burger
@@ -76,7 +76,7 @@ class Burger {
 	hideMenu() {
 		if (this.laptopMenu && this.overlay) {
 			enableScroll()
-			this.state = !this.state
+			this.state.isOpen = !this.state.isOpen
 			this.burger.classList.remove(this.classes.burger)
 			this.laptopMenu.classList.remove(this.classes.laptopMenu)
 			this.overlay.classList.remove(this.classes.overlay)
@@ -86,7 +86,7 @@ class Burger {
 	showMenu() {
 		if (this.laptopMenu && this.overlay) {
 			disableScroll()
-			this.state = !this.state
+			this.state.isOpen = !this.state.isOpen
 			this.burger.classList.add(this.classes.burger)
 			this.laptopMenu.classList.add(this.classes.laptopMenu)
 			this.overlay.classList.add(this.classes.overlay)
@@ -95,7 +95,7 @@ class Burger {
 
 	toggleBurger() {
 		if (this.burger) {
-			if (this.state) {
+			if (this.state.isOpen) {
 				this.showMenu()
 			} else {
 				this.hideMenu()
@@ -144,5 +144,3 @@ class Burger {
 		this.bindMediaQuery()
 	}
 }
-
-export const burger = new Burger({ maxWidth: 1000 })

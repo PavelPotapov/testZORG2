@@ -1,6 +1,32 @@
 .portfolio {
 	padding-top: 179px;
 	margin-bottom: 256px;
+	min-height: 200dvh;
+
+	&::before {
+		content: "";
+		width: 12vw;
+		height: 62%;
+		position: absolute;
+		left: 0;
+		background-image: url("/img/circle-left.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+
+	&::after {
+		content: "";
+		width: 8vw;
+		height: 62%;
+		position: absolute;
+		right: 0;
+		top: 38%;
+		background-image: url("/img/circle-tight-small.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
 
 	@media screen and (max-width: 1347px) {
 		margin-bottom: 100px;
@@ -77,7 +103,7 @@
 			max-height: 60px;
 			width: 100%;
 			height: 100%;
-			background-image: url("../../../public/img/portfolio/filter.svg");
+			background-image: url("/img/portfolio/filter.svg");
 			background-size: 34px 30px;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -226,7 +252,7 @@
 		max-height: 60px;
 		width: 100%;
 		height: 100%;
-		background-image: url("../../../public/img/portfolio/filter.svg");
+		background-image: url("/img/portfolio/filter.svg");
 		background-size: 34px 30px;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -283,7 +309,7 @@
 		}
 		&::-webkit-scrollbar:vertical {
 			background-color: $color-gray;
-			width: 30px;
+			width: 10px;
 		}
 		/* Для Firefox браузера */
 		&::-moz-scrollbar-thumb:vertical {
@@ -316,7 +342,7 @@
 		top: 34px;
 		width: 60px;
 		height: 60px;
-		background-image: url("../../../public/img/portfolio/cross.svg");
+		background-image: url("/img/portfolio/cross.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
 		@media screen and (max-width: 1083px) {

@@ -5,9 +5,9 @@ import {
 	delay,
 	getDataFromDataJS,
 } from "../utils"
-import { popupHelper } from "./popupImages"
-import { gameItemsHelper } from "./gameItems"
-import { singleToneLoader } from "../loader"
+import { PopupHelper } from "./popupImages"
+import { GameItemsHelper } from "./gameItems"
+import { Loader } from "../loader"
 import { postFilterRequest } from "../API/filterAPI"
 /**
  * Класс для  фильтра на странице с играми.
@@ -100,13 +100,19 @@ class FilterHelper {
 		 * Ссылка на класс для управления элементами которые мы найдем
 		 * @type {GameItemsHelper}
 		 */
-		this.gameItemsHelper = gameItemsHelper
+		this.gameItemsHelper = new GameItemsHelper()
 		/**
 		 * Объект loader для отображения во время отправки / загрузки
-		 * Ссылается на единственный уже созданный объект класса Loader
+		 * Ссылается на единственный объект класса Loader
 		 * @type {Loader}
 		 */
-		this.loader = singleToneLoader
+		this.loader = new Loader()
+		/**
+		 * Объект popupHelper для
+		 * Ссылается на единственный объект класса PopupHelper
+		 * @type {PopupHelper}
+		 */
+		this.popupHelper = new PopupHelper()
 		//Вызываем внутренние методы в конструкторе
 		this.findElements()
 		this.acceptEvents()
@@ -162,13 +168,13 @@ class FilterHelper {
 			if (response) {
 				await this.gameItemsHelper.clearContents()
 				this.gameItemsHelper.createItems(response)
-				popupHelper.findGameItems() //там же навешивается слушатель событий
+				this.popupHelper.findGameItems() //там же навешивается слушатель событий
 			} else {
 				this.emptyData("По данному запросу ничего не найдено 🙌🙌🙌")
 				createSuccessfulToast("Попробуйте другие фильтры 🙃)")
 			}
 		} catch (err) {
-			this.emptyData("Ошибка запроса. Попробуй позже 🗿🗿🗿")
+			this.emptyData("Ошибка запроса. Попробуйте позже 🗿🗿🗿")
 			createErrorToast("Что-то случилось на сервере...Попробуйте позже 🤔")
 		} finally {
 			delay(500).then(() => {

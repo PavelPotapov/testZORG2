@@ -14,3 +14,43 @@ $color-gray3: #242424;
 $color-blue: #0f8ff9;
 $color-accent: #99cc00;
 $color-yellow: #dbefa9;
+
+:root {
+	--color-darkblue: #051534;
+	--color-white: #ffffff;
+	--color-lightblue: #8394b5;
+	--color-black: #f7f1f1;
+	--color-black2: #ffffff;
+	--color-gray: #c5c58e;
+	--color-gray2: #dbc8c8;
+	--color-gray3: #cfc0c0;
+	--color-blue: #143550;
+	--color-accent: #a0a397;
+	--color-yellow: #555752;
+}
+
+.dark-mode {
+	--color-darkblue: #051534;
+	--color-white: #ffffff;
+	--color-lightblue: #8394b5;
+	--color-black: #191919;
+	--color-black2: #171717;
+	--color-gray: #343433;
+	--color-gray2: #302f2f;
+	--color-gray3: #242424;
+	--color-blue: #0f8ff9;
+	--color-accent: #99cc00;
+	--color-yellow: #dbefa9;
+}
+
+// @media (prefers-color-scheme: light) {
+// 	:root {
+// 		--color-black2: #171717;
+// 	}
+// }
+
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--color-black2: red;
+// 	}
+// }

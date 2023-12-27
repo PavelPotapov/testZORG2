@@ -167,7 +167,7 @@
 			content: "";
 			width: 66px;
 			aspect-ratio: 1 / 1;
-			background-image: url("../../../public/img/form/file.png");
+			background-image: url("/img/form/file.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			display: inline-block;
@@ -190,7 +190,7 @@
 				left: 0;
 				width: 30px;
 				height: 30px;
-				background-image: url("../../../public/img/portfolio/cross.svg");
+				background-image: url("/img/portfolio/cross.svg");
 				background-repeat: no-repeat;
 				background-size: contain;
 				@media screen and (max-width: 1083px) {
@@ -263,7 +263,7 @@
 		top: 34px;
 		width: 60px;
 		height: 60px;
-		background-image: url("../../../public/img/portfolio/cross.svg");
+		background-image: url("/img/portfolio/cross.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
 		@media screen and (max-width: 1083px) {
