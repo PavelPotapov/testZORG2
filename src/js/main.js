@@ -4,5 +4,5 @@ import { AriaHidden } from "./areaHidden"
 /**
  * Файл нужен для всех страниц. Точка входа в приложение.
  */
-new Burger({ maxWidth: 1000 })
-new AriaHidden('[data-js="laptop-menu"]', 1000)
+new Burger({ maxWidth: 1100 })
+new AriaHidden('[data-js="laptop-menu"]', 1100)

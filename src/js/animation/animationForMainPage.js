@@ -1,5 +1,5 @@
-import * as ScrollMagic from "scrollmagic" 
-import { TweenMax, TimelineMax, Power2 } from "gsap" 
+import * as ScrollMagic from "scrollmagic"
+import { TweenMax, TimelineMax, Power2 } from "gsap"
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
@@ -23,8 +23,8 @@ const scene1 = new ScrollMagic.Scene({
 })
 
 const scene2 = new ScrollMagic.Scene({
-	triggerElement: ".services__profile-subtitle",
-	triggerHook: 0.7,
+	triggerElement: ".services__profile",
+	triggerHook: 0.8,
 	reverse: false,
 })
 
